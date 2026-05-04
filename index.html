@@ -651,6 +651,24 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes dollIn {
+      from { transform: scale(1); }
+      to   { transform: scale(1.09); }
+    }
+
+    @keyframes dollOut {
+      from { transform: scale(1.09); }
+      to   { transform: scale(1); }
+    }
+
+    /* Odd slides dolly in, even slides dolly out */
+    .slide-1.active, .slide-3.active {
+      animation: dollIn 7s ease-in-out forwards;
+    }
+    .slide-2.active, .slide-4.active {
+      animation: dollOut 7s ease-in-out forwards;
+    }
+
     /* ── Slide dots ── */
     .slide-dots {
       position: absolute;
